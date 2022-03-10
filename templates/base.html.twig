@@ -22,16 +22,16 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
-                            <a class="nav-link" href="/Acccueil.html">Accueil</a>
-                            <a class="nav-link" href="/Votre coach.html">Votre coach</a>
-                            <a class="nav-link" href="/Nos services.html">Nos services</a>
-                            <a class="nav-link" href="/Me contacter.html">Me contacter</a>
+                            <a class="nav-link" href="{{path('accueil')}}">Accueil</a>
+                            <a class="nav-link" href="{{path('coach')}}">Votre coach</a>
+                            <a class="nav-link" href="{{path('services')}}">Nos services</a>
+                            <a class="nav-link" href="{{path('contact')}}">Me contacter</a>
                         </div>
                     </div>
                 </div>
             </nav>
 
         </header>
-        {% block body %}{% endblock %}
+        {% block body %} {% endblock %}
     </body>
 </html>
