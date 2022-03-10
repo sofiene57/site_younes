@@ -1,0 +1,327 @@
+/*Accuei*/
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+#logonoir {
+    width: 7vw;
+    height: 10vh;
+}
+
+#img1 {
+    width: 100%;
+    height: 80vh;
+    background-image: url(/img/IMG_1.jpeg);
+    background-size: cover;
+    background-position: 0 27%;
+}
+
+#txt1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    margin-right: 10vh;
+}
+
+#logo {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+#logo img {
+    height: 40vh;
+    width: 15%;
+    margin: 5vh 10vw;
+}
+
+#logotxt {
+    margin: 5vh auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-size: 2.6vh;
+}
+
+#logotxt hr {
+    width: 50%;
+    color: #567C7D;
+    height: 5px;
+}
+
+.parallax {
+    height: 70vh;
+    width: 100%;
+    background-image: url(/img/dos.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#hr2 {
+    width: 20vw;
+    height: 5px;
+    margin-bottom: 10vh;
+    color: #567C7D;
+}
+
+h1 {
+    text-align: center;
+    color: #567C7D;
+}
+
+#section3 {
+    display: flex;
+    justify-content: space-around;
+    margin: 10vh auto;
+    width: 90vw;
+}
+
+.divpk {
+    border: black solid 2px;
+    font-size: 3vh;
+    height: 20vh;
+    width: 15vw;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+#video {
+    width: 90vw;
+    height: 40vh;
+    background-color: gray;
+    font-size: 10vh;
+    color: white;
+    text-align: center;
+    margin-bottom: 10vh;
+}
+
+
+/*Votre coach*/
+
+#img2 {
+    width: 100%;
+    height: 80vh;
+    background-image: url(/img/IMG_2.jpeg);
+    background-size: cover;
+    background-position: 0 60%;
+    margin-bottom: 10vh;
+}
+
+#txt2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 3vh;
+    height: 20vh;
+    margin-bottom: 15vh;
+}
+
+#h0 {
+    font-size: 5vh;
+    color: #567C7D;
+}
+
+#presen {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15vh;
+}
+
+#qsj {
+    width: 50vw;
+    margin-left: 10vw;
+    text-align: left;
+    font-size: 2vh;
+}
+
+#qsj h1 {
+    text-align: left;
+}
+
+#carre {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #CFCDCD;
+    border: solid 4px #567C7D;
+    width: 20vw;
+    height: 70vh;
+    margin-right: 10vw;
+    text-align: center;
+}
+
+#carre h1 {
+    font-size: 5vh;
+}
+
+#carre p {
+    font-size: 3vh;
+}
+
+#hr1 {
+    width: 60vw;
+    height: 5px;
+    color: #567C7D;
+    margin-bottom: 10vh;
+}
+
+.img {
+    width: 10vw;
+    margin-bottom: 3vh;
+}
+
+.img {
+    transition-property: width, height;
+}
+
+.img:hover {
+    width: 30vw;
+    height: 70vh;
+    cursor: pointer;
+    margin-bottom: 5vh;
+}
+
+#vivi {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 40vh;
+    margin: 5vh;
+}
+
+.video {
+    width: 25%;
+    height: 35vh;
+    background-color: rgb(129, 75, 8);
+}
+
+.carou2 {
+    margin-bottom: 30vh;
+}
+
+.carou2 img {
+    height: 70vh;
+}
+
+#carouselExampleFade {
+    width: 40vw;
+    align-items: center;
+}
+
+
+/*Nos services*/
+
+#img3 {
+    width: 100%;
+    height: 80vh;
+    background-image: url(/img/IMG_3.jpeg);
+    background-size: cover;
+    background-position: 0 47%;
+    margin-bottom: 10vh;
+}
+
+h3 {
+    color: #567C7D;
+}
+
+.txtimg {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5vh;
+}
+
+h4 {
+    color: #567C7D;
+}
+
+.text {
+    width: 50%;
+    text-align: left;
+    font-size: 2vh;
+}
+
+.txtimg img {
+    width: 30%;
+    height: 55vh;
+}
+
+.imgtxt {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5vh;
+}
+
+.imgtxt img {
+    width: 30%;
+    height: 55vh;
+}
+
+
+/*Me contacter*/
+
+#body {
+    background-color: black;
+}
+
+.contact {
+    height: 30vh;
+    width: 25vw;
+    border: solid 1px #567C7D;
+    font-size: 4vh;
+    color: white;
+}
+
+#info {
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    height: 40vh;
+}
+
+form {
+    width: 50%;
+    height: 65vh;
+    text-align: left;
+    align-items: center;
+}
+
+#message {
+    height: 20vh;
+}
+
+button {
+    color: white;
+    background-color: #567C7D;
+    padding: 1vh 3vh;
+}
+
+.blanc {
+    color: white;
+}
+
+#carte {
+    margin-bottom: 5vh;
+}
