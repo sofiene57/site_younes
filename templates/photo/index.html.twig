@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Photo index{% endblock %}
+
+{% block body %}
+    <h1>Photo index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IdPhoto</th>
+                <th>NomPhoto</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for photo in photos %}
+            <tr>
+                <td>{{ photo.idPhoto }}</td>
+                <td>{{ photo.nomPhoto }}</td>
+                <td>
+                    <a href="{{ path('app_photo_show', {'idPhoto': photo.idPhoto}) }}">show</a>
+                    <a href="{{ path('app_photo_edit', {'idPhoto': photo.idPhoto}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_photo_new') }}">Create new</a>
+{% endblock %}
