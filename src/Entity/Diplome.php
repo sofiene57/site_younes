@@ -24,7 +24,7 @@ class Diplome
     /**
      * @var int|null
      *
-     * @ORM\Column(name="nom_diplome", type="integer", nullable=true)
+     * @ORM\Column(name="nom_diplome", type="string", nullable=true)
      */
     private $nomDiplome;
 
@@ -33,12 +33,12 @@ class Diplome
         return $this->idDiplome;
     }
 
-    public function getNomDiplome(): ?int
+    public function getNomDiplome(): ?string
     {
         return $this->nomDiplome;
     }
 
-    public function setNomDiplome(?int $nomDiplome): self
+    public function setNomDiplome(?string $nomDiplome): self
     {
         $this->nomDiplome = $nomDiplome;
 

@@ -3,6 +3,9 @@
 {% block title %}Service index{% endblock %}
 
 {% block body %}
+
+<link rel="stylesheet" href="{{ asset('css/style_crud.css') }}"/>
+
     <h1>Service index</h1>
 
     <table class="table">
@@ -10,7 +13,8 @@
             <tr>
                 <th>IdService</th>
                 <th>NomService</th>
-                <th>actions</th>
+                <th>Voir </th>
+                <th>Modifier</th>
             </tr>
         </thead>
         <tbody>
@@ -19,17 +23,20 @@
                 <td>{{ service.idService }}</td>
                 <td>{{ service.nomService }}</td>
                 <td>
-                    <a href="{{ path('app_service_show', {'idService': service.idService}) }}">show</a>
-                    <a href="{{ path('app_service_edit', {'idService': service.idService}) }}">edit</a>
+                    <a href="{{ path('app_service_show', {'idService': service.idService}) }}">voir</a>
                 </td>
+                <td>
+                    <a href="{{ path('app_service_edit', {'idService': service.idService}) }}">modifier</a>
+                </td>
+                
             </tr>
         {% else %}
             <tr>
-                <td colspan="3">no records found</td>
+                <td colspan="3">aucune image trouvée</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('app_service_new') }}">Create new</a>
+    <a href="{{ path('app_service_new') }}">Ajouter un nouveau service</a>
 {% endblock %}
