@@ -1,0 +1,37 @@
+.table{
+    border-collapse: collapse;
+    width: 70vw;
+    font-size: 3vh;
+    margin-bottom: 10vh;
+}
+
+td, th{
+    border: 1px solid black;
+}
+
+h1{
+    margin-bottom: 10vh;
+}
+
+a{
+    font-size: 3vh;
+}
+
+.btn{
+    margin-left: 40%;
+    background-color: red;
+    border-radius: 10px;
+    color: white;
+    margin-top: 10vh;
+    width: 10vw;
+    height: 5vh;
+    font-size: 2vh;
+}
+
+#coach{
+    padding: 50px;
+}
+
+label{
+    margin: 10px;
+}

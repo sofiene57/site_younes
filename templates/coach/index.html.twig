@@ -1,9 +1,14 @@
 {% extends 'base.html.twig' %}
 
+
 {% block title %}Coach index{% endblock %}
 
+
 {% block body %}
-    <h1>Coach index</h1>
+
+<link rel="stylesheet" href="{{ asset('css/style_crud.css') }}"/>
+
+    <h1>Liste des coach</h1>
 
     <table class="table">
         <thead>
@@ -11,7 +16,8 @@
                 <th>IdCoach</th>
                 <th>NomCoach</th>
                 <th>Experience</th>
-                <th>actions</th>
+                <th>Voir fiche</th>
+                <th>Modifier</th>
             </tr>
         </thead>
         <tbody>
@@ -21,17 +27,19 @@
                 <td>{{ coach.nomCoach }}</td>
                 <td>{{ coach.experience }}</td>
                 <td>
-                    <a href="{{ path('app_coach_show', {'idCoach': coach.idCoach}) }}">show</a>
-                    <a href="{{ path('app_coach_edit', {'idCoach': coach.idCoach}) }}">edit</a>
+                   <a href="{{ path('app_coach_show', {'idCoach': coach.idCoach}) }}">Voir</a>
                 </td>
+                <td>
+                    <a href="{{ path('app_coach_edit', {'idCoach': coach.idCoach}) }}">Modifier</a>
+                </td>        
             </tr>
         {% else %}
             <tr>
-                <td colspan="4">no records found</td>
+                <td colspan="4">Pas de coach enregistré</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('app_coach_new') }}">Create new</a>
+    <a href="{{ path('app_coach_new') }}">Ajouter un nouveau coach</a>
 {% endblock %}

@@ -17,10 +17,10 @@ class AccueilController extends AbstractController
         ]);
     }
 
-    #[Route('/coach', name: 'coach')]
+    #[Route('/notre_equipe', name: 'equipe')]
     public function coach(): Response
     {
-        return $this->render('pages/coach.html.twig', [
+        return $this->render('pages/notre_equipe.html.twig', [
             'controller_name' => 'AccueilController',
         ]);
     }

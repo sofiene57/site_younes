@@ -3,6 +3,9 @@
 {% block title %}Photo index{% endblock %}
 
 {% block body %}
+
+<link rel="stylesheet" href="{{ asset('css/style_crud.css') }}"/>
+
     <h1>Photo index</h1>
 
     <table class="table">
@@ -10,7 +13,8 @@
             <tr>
                 <th>IdPhoto</th>
                 <th>NomPhoto</th>
-                <th>actions</th>
+                <th>Voir </th>
+                <th>Modifier</th>
             </tr>
         </thead>
         <tbody>
@@ -19,8 +23,8 @@
                 <td>{{ photo.idPhoto }}</td>
                 <td>{{ photo.nomPhoto }}</td>
                 <td>
-                    <a href="{{ path('app_photo_show', {'idPhoto': photo.idPhoto}) }}">show</a>
-                    <a href="{{ path('app_photo_edit', {'idPhoto': photo.idPhoto}) }}">edit</a>
+                    <a href="{{ path('app_photo_show', {'idPhoto': photo.idPhoto}) }}">voir</a>
+                    <a href="{{ path('app_photo_edit', {'idPhoto': photo.idPhoto}) }}">modifier</a>
                 </td>
             </tr>
         {% else %}
