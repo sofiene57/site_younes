@@ -3,7 +3,10 @@
 {% block title %}New Diplome{% endblock %}
 
 {% block body %}
-    <h1>Ajouter un diplome</h1>
+
+<link rel="stylesheet" href="{{ asset('/css/style_crud.css') }}"/>
+
+    <h1>Ajouter un nouveau diplome</h1>
 
     {{ include('diplome/_form.html.twig') }}
 

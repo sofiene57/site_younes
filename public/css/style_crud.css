@@ -10,6 +10,7 @@ td, th{
 }
 
 h1{
+    margin-top: 20vh;
     margin-bottom: 10vh;
 }
 
@@ -18,11 +19,10 @@ a{
 }
 
 .btn{
-    margin-left: 40%;
+    margin-left: 38%;
     background-color: red;
     border-radius: 10px;
     color: white;
-    
     width: 10vw;
     height: 5vh;
     font-size: 2vh;
@@ -35,3 +35,5 @@ a{
 label{
     margin: 10px;
 }
+
+

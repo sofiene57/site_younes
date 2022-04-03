@@ -3,9 +3,12 @@
 {% block title %}New Service{% endblock %}
 
 {% block body %}
+
+<link rel="stylesheet" href="{{ asset('css/style_crud.css') }}"/>
+
     <h1>Ajouter un service</h1>
 
     {{ include('service/_form.html.twig') }}
 
-    <a href="{{ path('app_service_index') }}">back to list</a>
+    <a href="{{ path('app_service_index') }}">Retour à la liste</a>
 {% endblock %}

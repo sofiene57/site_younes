@@ -3,6 +3,9 @@
 {% block title %}Photo{% endblock %}
 
 {% block body %}
+
+<link rel="stylesheet" href="{{ asset('css/style_crud.css') }}"/>
+
     <h1>Photo</h1>
 
     <table class="table">
@@ -24,9 +27,11 @@
         </tbody>
     </table>
 
+
+
+    <a href="{{ path('app_photo_edit', {'idPhoto': photo.idPhoto}) }}">Modifier</a> <br>
+
+    {{ include('photo/_delete_form.html.twig') }}   
+
     <a href="{{ path('app_photo_index') }}">Retour à la liste</a>
-
-    <a href="{{ path('app_photo_edit', {'idPhoto': photo.idPhoto}) }}">Modifier</a>
-
-    {{ include('photo/_delete_form.html.twig') }}
 {% endblock %}
