@@ -36,9 +36,11 @@ class Coach
     private $experience;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @var string|null
+     *
+     * @ORM\Column(name="photo", type="string", length=50, nullable=true)
      */
-    private $Image;
+    private $photo;
 
     public function getIdCoach(): ?int
     {
@@ -69,14 +71,14 @@ class Coach
         return $this;
     }
 
-    public function getImage(): ?string
+    public function getPhoto(): ?string
     {
-        return $this->Image;
+        return $this->photo;
     }
 
-    public function setImage(string $Image): self
+    public function setPhoto(?string $photo): self
     {
-        $this->Image = $Image;
+        $this->photo = $photo;
 
         return $this;
     }

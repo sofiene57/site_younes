@@ -9,6 +9,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\String\Slugger\SluggerInterface;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
 
 #[Route('/photo')]
 class PhotoController extends AbstractController
@@ -26,13 +28,40 @@ class PhotoController extends AbstractController
     }
 
     #[Route('/new', name: 'app_photo_new', methods: ['GET', 'POST'])]
-    public function new(Request $request, EntityManagerInterface $entityManager): Response
+    public function new(Request $request, EntityManagerInterface $entityManager, SluggerInterface $slugger): Response
     {
         $photo = new Photo();
         $form = $this->createForm(PhotoType::class, $photo);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $addPhoto = $form->get('lienPhoto')->getData();
+
+            if ($addPhoto) {
+
+                // ===== Récuperation du nom de la photo =====
+
+                $originalFilename = pathinfo($addPhoto->getClientOriginalName(), PATHINFO_FILENAME);
+                $safeFilename = $slugger->slug($originalFilename);
+
+                // ===== Ajout d'un id unique sur le nom de la photo =====
+
+                $newFilename = $safeFilename . '-' . uniqid() . '.' . $addPhoto->guessExtension();
+
+                // ===== Ajout de la photo dans le dossier 'images_directory' =====
+                try {
+                    $addPhoto->move(
+                        $this->getParameter('images_directory'),
+                        $newFilename
+                    );
+                } catch (FileException $e) {
+                }
+
+                // ===== Ajout à la base de données =====
+
+                $photo->setLienPhoto($newFilename);
+            }
             $entityManager->persist($photo);
             $entityManager->flush();
 

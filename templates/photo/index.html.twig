@@ -12,7 +12,8 @@
         <thead>
             <tr>
                 <th>IdPhoto</th>
-                <th>NomPhoto</th>
+                <th>LienPhoto</th>
+                <th>Description</th>
                 <th>Voir </th>
                 <th>Modifier</th>
             </tr>
@@ -21,11 +22,16 @@
         {% for photo in photos %}
             <tr>
                 <td>{{ photo.idPhoto }}</td>
-                <td>{{ photo.nomPhoto }}</td>
+                <td>{{ photo.lienPhoto }}</td>
+                <td>{{ photo.descriptionPhoto }}</td>
+                
                 <td>
                     <a href="{{ path('app_photo_show', {'idPhoto': photo.idPhoto}) }}">voir</a>
+                </td>
+                <td>
                     <a href="{{ path('app_photo_edit', {'idPhoto': photo.idPhoto}) }}">modifier</a>
                 </td>
+                
             </tr>
         {% else %}
             <tr>
@@ -35,5 +41,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_photo_new') }}">Create new</a>
+    <a href="{{ path('app_photo_new') }}">Ajouter une photo</a>
 {% endblock %}
