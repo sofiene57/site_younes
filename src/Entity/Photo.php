@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Photo
  *
- * @ORM\Table(name="photo")
+ * @ORM\Table(name="photo", indexes={@ORM\Index(name="id_coach", columns={"id_coach"}), @ORM\Index(name="id_service", columns={"id_service"})})
  * @ORM\Entity
  */
 class Photo
@@ -24,23 +24,80 @@ class Photo
     /**
      * @var string|null
      *
-     * @ORM\Column(name="nom_photo", type="string", length=50, nullable=true)
+     * @ORM\Column(name="lien_photo", type="string", length=50, nullable=true)
      */
-    private $nomPhoto;
+    private $lienPhoto;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="description_photo", type="string", length=50, nullable=true)
+     */
+    private $descriptionPhoto;
+
+    /**
+     * @var int|null
+     *
+     * @ORM\Column(name="id_service", type="integer", nullable=true)
+     */
+    private $idService;
+
+    /**
+     * @var int|null
+     *
+     * @ORM\Column(name="id_coach", type="integer", nullable=true)
+     */
+    private $idCoach;
 
     public function getIdPhoto(): ?int
     {
         return $this->idPhoto;
     }
 
-    public function getNomPhoto(): ?string
+    public function getLienPhoto(): ?string
     {
-        return $this->nomPhoto;
+        return $this->lienPhoto;
     }
 
-    public function setNomPhoto(?string $nomPhoto): self
+    public function setLienPhoto(?string $lienPhoto): self
     {
-        $this->nomPhoto = $nomPhoto;
+        $this->lienPhoto = $lienPhoto;
+
+        return $this;
+    }
+
+    public function getDescriptionPhoto(): ?string
+    {
+        return $this->descriptionPhoto;
+    }
+
+    public function setDescriptionPhoto(?string $descriptionPhoto): self
+    {
+        $this->descriptionPhoto = $descriptionPhoto;
+
+        return $this;
+    }
+
+    public function getIdService(): ?int
+    {
+        return $this->idService;
+    }
+
+    public function setIdService(?int $idService): self
+    {
+        $this->idService = $idService;
+
+        return $this;
+    }
+
+    public function getIdCoach(): ?int
+    {
+        return $this->idCoach;
+    }
+
+    public function setIdCoach(?int $idCoach): self
+    {
+        $this->idCoach = $idCoach;
 
         return $this;
     }

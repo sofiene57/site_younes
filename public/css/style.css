@@ -1,3 +1,41 @@
+/*Navbar*/
+.navbar-nav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 85%;
+    padding-top: 1%;
+}
+
+#a {
+    color: #567C7D;
+    border: 1px solid #567C7D;
+    border-radius: 4px;
+    padding: 10px 18px 40px 15px;
+    cursor: pointer;
+    height: 32px;
+    font-size: 20px;
+    box-shadow: 0 0 4px #999;
+    outline: none;
+    background-position: center;
+    transition: background 0.8s;
+    margin-bottom: 2vh;
+}
+
+#a:hover {
+    background: #567C7D radial-gradient(circle, transparent 1%, #567C7D 1%) center/15000%;
+    color: white;
+}
+
+a:active {
+    background-color: #292d3e;
+    background-size: 100%;
+    transition: background 0s;
+}
+
+header{
+   position:fixed;
+}
+
 /*Accuei*/
 
 body {
@@ -94,13 +132,26 @@ h1 {
 }
 
 .divpk {
-    border: black solid 2px;
-    font-size: 3vh;
-    height: 20vh;
-    width: 15vw;
+    border: rgb(0, 0, 0) solid 2px;
+    font-size: 4vh;
+    height: 25vh;
+    width: 20vw;
     display: flex;
     text-align: center;
     align-items: center;
+}
+
+.divpk {
+    transition-property: width, height, background-color,color;
+
+}
+
+.divpk:hover {
+    width: 25vw;
+    height: 35vh;
+    margin-bottom: 5vh;
+    background-color: #567C7D;
+    color: white;
 }
 
 #video {
@@ -287,25 +338,34 @@ h4 {
 }
 
 .contact {
-    height: 30vh;
-    width: 25vw;
+    height: 65%;
+    width: 35%;
     border: solid 1px #567C7D;
-    font-size: 4vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     color: white;
+    font-size: 4vh;
 }
 
 #info {
+    width: 90vw;
     display: flex;
-    width: 90%;
     justify-content: space-around;
-    height: 40vh;
+    height: 50vh;
 }
 
 form {
-    width: 50%;
-    height: 65vh;
+    width: 40%;
+    height: 20%;
     text-align: left;
     align-items: center;
+    margin-bottom: 5%;
+}
+
+.label {
+    color: white;
+    font-size: 3vh;
 }
 
 #message {
@@ -319,6 +379,7 @@ button {
 }
 
 .blanc {
+    margin-top: 15vh;
     color: white;
 }
 
