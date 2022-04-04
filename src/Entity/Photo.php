@@ -42,13 +42,6 @@ class Photo
      */
     private $idService;
 
-    /**
-     * @var int|null
-     *
-     * @ORM\Column(name="id_coach", type="integer", nullable=true)
-     */
-    private $idCoach;
-
     public function getIdPhoto(): ?int
     {
         return $this->idPhoto;
@@ -89,18 +82,5 @@ class Photo
 
         return $this;
     }
-
-    public function getIdCoach(): ?int
-    {
-        return $this->idCoach;
-    }
-
-    public function setIdCoach(?int $idCoach): self
-    {
-        $this->idCoach = $idCoach;
-
-        return $this;
-    }
-
 
 }

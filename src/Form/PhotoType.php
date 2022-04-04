@@ -30,7 +30,8 @@ class PhotoType extends AbstractType
                     'mimeTypesMessage' => 'Veuillez insérer un jpeg ou un png uniquement',
                 ])
             ],
-        ]);
+        ])
+        ->add('idService');
           
     }
 

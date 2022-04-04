@@ -24,7 +24,7 @@ class Diplome
     /**
      * @var string|null
      *
-     * @ORM\Column(name="nom_diplome", type="string", length=11, nullable=true)
+     * @ORM\Column(name="nom_diplome", type="string", length=50, nullable=true)
      */
     private $nomDiplome;
 
