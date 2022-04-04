@@ -16,6 +16,21 @@ class CoachType extends AbstractType
         $builder
             ->add('nomCoach')
             ->add('experience')
+            ->add('photo', FileType::class, [
+                'label' => 'Ajouter une photo',
+                'mapped' => false,
+                'required' => false,
+                'constraints' => [
+                    new File([
+                        'maxSize' => '10240k',
+                        'mimeTypes' => [
+                            'image/jpeg',
+                            'image/png'
+                        ],
+                        'mimeTypesMessage' => 'Veuillez insérer un jpeg ou un png uniquement',
+                    ])
+                ],
+            ])
         ;
     }
 

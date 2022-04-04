@@ -14,6 +14,8 @@
                 <th>IdPhoto</th>
                 <th>LienPhoto</th>
                 <th>Description</th>
+                <th>Id coach</th>
+                <th>Id service</th>
                 <th>Voir </th>
                 <th>Modifier</th>
             </tr>
@@ -24,7 +26,8 @@
                 <td>{{ photo.idPhoto }}</td>
                 <td>{{ photo.lienPhoto }}</td>
                 <td>{{ photo.descriptionPhoto }}</td>
-                
+                <td>{{ photo.idCoach }}</td>
+                <td>{{ photo.idService }}</td>
                 <td>
                     <a href="{{ path('app_photo_show', {'idPhoto': photo.idPhoto}) }}">voir</a>
                 </td>

@@ -29,14 +29,10 @@
                 <td>{{ coach.experience }}</td>
                 <td>
                    <a href="{{ path('app_coach_show', {'idCoach': coach.idCoach}) }}">Voir</a>
-                </td>
+                </td> 
                 <td>
                     <a href="{{ path('app_coach_edit', {'idCoach': coach.idCoach}) }}">Modifier</a>
-                </td>        
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="4">Pas de coach enregistré</td>
+                 </td>    
             </tr>
         {% endfor %}
         </tbody>

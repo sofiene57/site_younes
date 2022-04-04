@@ -9,7 +9,7 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class AccueilController extends AbstractController
 {
-    #[Route('/accueil', name: 'accueil')]
+    #[Route('/', name: 'accueil')]
     public function accueil(): Response
     {
         return $this->render('pages/accueil.html.twig', [

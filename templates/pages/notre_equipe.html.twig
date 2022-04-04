@@ -3,94 +3,17 @@
 {% block body %}
 
     <main>
-        <section id="img2"></section>
-        <div id="txt2">
-            <p id="h0">YOUNES, VOTRE COACH SPORTIF</p>
-            <p id="eleves"> C'est déjà +1000 élèves de coachés <br />
-                Pourquoi pas vous ?
-            </p>
-        </div>
-
-        <section id="presen">
-
-            <div id="qsj">
-                <h1>QUI SUIS-JE ?</h1> <br />
-                <p> Coach de musculation depuis 2019, j’ai à cœur de vous aider à
-                    progresser <br />
-                    en vous donnant les moyens de vos ambitions en laissant le moins de
-                    place <br />
-                    au hasard possible que cela soit pour faire une prise de masse, pour <br />
-                    sécher, dessiner ses muscles ou se remettre en forme. <br /> <br />
-
-                    Militant pour la musculation sans dopage, je ferais tout mon
-                    possible pour vous <br />
-                    permettre d’atteindre vos objectifs que vous vous entraîniez chez
-                    vous en <br />
-                    Home Gym, en salle et/ou aux poids de corps. <br /> <br />
-
-                    Mon but n’est pas de vous préconiser l’idéal universel mais de
-                    trouver votre <br />
-                    idéal pratique afin de trouver votre équilibre pour vous éviter de
-                    vous blesser, <br />
-                    pour ne générer aucune frustration et de trouver les meilleurs
-                    exercices de <br />
-                    musculation en fonction de votre morpho-anatomie.
-                </p>
-            </div>
-            
-            <div id="carre">
-                <h1> CE QUE JE PEUX <br />
-                    VOUS APPORTER
-                </h1>
-                <p>ENTRAINEMENT</p>
-                <p> NUTRITION ET <br />
-                    REEQUILIBRAGE
-                </p>
-                <p>SECHAGE</p>
-                <p>REMISE EN FORME</p>
-                <p>PRISE DE MASSE</p>
-            </div>
-        </section>
-
-        <hr id="hr1" />
-
-        <h1 style="margin-right: 60vw">QUELQUES PHOTOS</h1><br /> <br />
-
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <img class="img" src="/img/IMG_2497.jpeg" alt="" />
-                </div>
-                <div class="col">
-                    <img class="img" src="/img/IMG_2481.jpeg" alt="" />
-                </div>
-                <div class="col">
-                    <img class="img" src="/img/IMG_2495.jpeg" alt="" />
-                </div>                
-            </div>
-            <div class="row">
-                <div class="col">
-                    <img class="img" src="/img/IMG_2500.jpeg" alt="" />
-                </div>
-                <div class="col">
-                    <img class="img" src="/img/IMG_2499.jpeg" alt="" />
-                </div>
-                <div class="col">
-                    <img class="img" src="/img/inbody.jpg" alt="" />
-                </div>
-            </div>
-
-        </div>
-
-        <hr id="hr1" />
-
-        <h1 style="margin-right: 60vw">QUELQUES VIDEOS</h1>
-
-        <section id="vivi">
-            <div class="video"></div>
-            <div class="video"></div>
-            <div class="video"></div>
-        </section>
+        {% for coach in coaches %}
+            <tr>
+                <td>{{ coach.idCoach }}</td>
+                <td>{{ coach.nomCoach }}</td>
+                <td>{{ coach.experience }}</td>
+                <td>
+                   <a href="{{ path('app_coach_show', {'idCoach': coach.idCoach}) }}">Voir</a>
+                </td>
+        
+            </tr>
+        {% endfor %}
 
     </main>
 
